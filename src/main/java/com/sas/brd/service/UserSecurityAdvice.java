@@ -45,6 +45,7 @@ public class UserSecurityAdvice implements MethodBeforeAdvice, AfterReturningAdv
      * @param target the target class
      * @throws Throwable thrown when args[0] is null or not a User object
      */
+    @Override
     public void before(Method method, Object[] args, Object target) throws Throwable {
         SecurityContext ctx = SecurityContextHolder.getContext();
 
@@ -110,6 +111,7 @@ public class UserSecurityAdvice implements MethodBeforeAdvice, AfterReturningAdv
      * @param target the target class
      * @throws Throwable thrown when args[0] is null or not a User object
      */
+    @Override
     public void afterReturning(Object returnValue, Method method, Object[] args, Object target)
     throws Throwable {
         User user = (User) args[0];
