@@ -26,6 +26,7 @@ public class RoleManagerImpl extends GenericManagerImpl<Role, Long> implements R
     /**
      * {@inheritDoc}
      */
+    @Override
     public List<Role> getRoles(Role role) {
         return dao.getAll();
     }
@@ -33,6 +34,7 @@ public class RoleManagerImpl extends GenericManagerImpl<Role, Long> implements R
     /**
      * {@inheritDoc}
      */
+    @Override
     public Role getRole(String rolename) {
         return roleDao.getRoleByName(rolename);
     }
@@ -40,6 +42,7 @@ public class RoleManagerImpl extends GenericManagerImpl<Role, Long> implements R
     /**
      * {@inheritDoc}
      */
+    @Override
     public Role saveRole(Role role) {
         return dao.save(role);
     }
@@ -47,6 +50,7 @@ public class RoleManagerImpl extends GenericManagerImpl<Role, Long> implements R
     /**
      * {@inheritDoc}
      */
+    @Override
     public void removeRole(String rolename) {
         roleDao.removeRole(rolename);
     }

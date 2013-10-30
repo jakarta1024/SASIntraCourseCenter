@@ -4,7 +4,6 @@ import com.sas.brd.dao.UserDao;
 import com.sas.brd.model.User;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.orm.hibernate4.SessionFactoryUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,8 +13,6 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.Table;
 import java.util.List;
 import org.hibernate.Query;
-import org.hibernate.SQLQuery;
-import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 /**
@@ -43,6 +40,7 @@ public class UserDaoHibernate extends GenericDaoHibernate<User, Long> implements
      * {@inheritDoc}
      */
     @SuppressWarnings("unchecked")
+    @Override
     public List<User> getUsers() {
         Query qry = getSession().createQuery("from User u order by upper(u.username)");
         return qry.list();
@@ -51,6 +49,7 @@ public class UserDaoHibernate extends GenericDaoHibernate<User, Long> implements
     /**
      * {@inheritDoc}
      */
+    @Override
     public User saveUser(User user) {
         if (log.isDebugEnabled()) {
             log.debug("user's id: " + user.getId());
@@ -77,6 +76,7 @@ public class UserDaoHibernate extends GenericDaoHibernate<User, Long> implements
     /**
      * {@inheritDoc}
     */
+    @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         List users = getSession().createCriteria(User.class).add(Restrictions.eq("username", username)).list();
         if (users == null || users.isEmpty()) {
@@ -89,6 +89,7 @@ public class UserDaoHibernate extends GenericDaoHibernate<User, Long> implements
     /**
      * {@inheritDoc}
     */
+    @Override
     public String getUserPassword(Long userId) {
         JdbcTemplate jdbcTemplate =
                 new JdbcTemplate(SessionFactoryUtils.getDataSource(getSessionFactory()));

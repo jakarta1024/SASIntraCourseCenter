@@ -35,6 +35,7 @@ public class LookupDaoHibernate implements LookupDao {
      * {@inheritDoc}
      */
     @SuppressWarnings("unchecked")
+    @Override
     public List<Role> getRoles() {
         log.debug("Retrieving all role names...");
         Session session = sessionFactory.getCurrentSession();

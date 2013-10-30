@@ -29,6 +29,7 @@ public class RoleDaoHibernate extends GenericDaoHibernate<Role, Long> implements
     /**
      * {@inheritDoc}
      */
+    @Override
     public Role getRoleByName(String rolename) {
         List roles = getSession().createCriteria(Role.class).add(Restrictions.eq("name", rolename)).list();
         if (roles.isEmpty()) {
@@ -41,6 +42,7 @@ public class RoleDaoHibernate extends GenericDaoHibernate<Role, Long> implements
     /**
      * {@inheritDoc}
      */
+    @Override
     public void removeRole(String rolename) {
         Object role = getRoleByName(rolename);
         Session session = getSessionFactory().getCurrentSession();

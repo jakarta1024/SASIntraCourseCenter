@@ -13,21 +13,28 @@ import java.util.List;
 public interface RoleManager extends GenericManager<Role, Long> {
     /**
      * {@inheritDoc}
+     * @param role
+     * @return 
      */
     List getRoles(Role role);
 
     /**
      * {@inheritDoc}
+     * @param rolename
+     * @return 
      */
     Role getRole(String rolename);
 
     /**
      * {@inheritDoc}
+     * @param role
+     * @return 
      */
     Role saveRole(Role role);
 
     /**
      * {@inheritDoc}
+     * @param rolename
      */
     void removeRole(String rolename);
 }
