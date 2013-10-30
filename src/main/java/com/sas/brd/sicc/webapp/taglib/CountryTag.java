@@ -1,6 +1,6 @@
 package com.sas.brd.sicc.webapp.taglib;
 
-import org.appfuse.model.LabelValue;
+import com.sas.brd.model.LabelValue;
 import org.displaytag.tags.el.ExpressionEvaluator;
 
 import javax.servlet.jsp.JspException;

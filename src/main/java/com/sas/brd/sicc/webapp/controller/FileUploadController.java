@@ -1,6 +1,6 @@
 package com.sas.brd.sicc.webapp.controller;
 
-import org.appfuse.Constants;
+import com.sas.brd.Constants;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;

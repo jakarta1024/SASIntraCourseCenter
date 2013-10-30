@@ -2,10 +2,10 @@ package com.sas.brd.sicc.webapp.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.appfuse.Constants;
-import org.appfuse.model.User;
-import org.appfuse.service.MailEngine;
-import org.appfuse.service.UserManager;
+import com.sas.brd.Constants;
+import com.sas.brd.model.User;
+import com.sas.brd.service.MailEngine;
+import com.sas.brd.service.UserManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.beans.propertyeditors.CustomNumberEditor;

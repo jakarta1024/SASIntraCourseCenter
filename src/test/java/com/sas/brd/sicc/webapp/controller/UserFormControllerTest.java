@@ -1,8 +1,8 @@
 package com.sas.brd.sicc.webapp.controller;
 
-import org.appfuse.Constants;
-import org.appfuse.model.User;
-import org.appfuse.service.UserManager;
+import com.sas.brd.Constants;
+import com.sas.brd.model.User;
+import com.sas.brd.service.UserManager;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mock.web.MockHttpServletRequest;
