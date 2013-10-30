@@ -66,7 +66,7 @@
     <!-- Use "org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter" if you're using JPA -->
     <filter>
         <filter-name>localeFilter</filter-name>
-        <filter-class>com.sas.brd.sicc.webapp.filter.LocaleFilter</filter-class>
+        <filter-class>com.sas.brd.sicc.filter.LocaleFilter</filter-class>
     </filter>
     <filter>
         <filter-name>rewriteFilter</filter-name>
@@ -147,13 +147,13 @@
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>
     <listener>
-        <listener-class>com.sas.brd.sicc.webapp.listener.StartupListener</listener-class>
+        <listener-class>com.sas.brd.sicc.listener.StartupListener</listener-class>
     </listener>
     <listener>
-        <listener-class>com.sas.brd.sicc.webapp.listener.UserCounterListener</listener-class>
+        <listener-class>com.sas.brd.sicc.listener.UserCounterListener</listener-class>
     </listener>
     <listener>
-        <listener-class>com.sas.brd.sicc.webapp.jsp.EscapeXmlELResolverListener</listener-class>
+        <listener-class>com.sas.brd.sicc.jsp.EscapeXmlELResolverListener</listener-class>
     </listener>
     <listener>
         <listener-class>net.sf.navigator.menu.MenuContextListener</listener-class>

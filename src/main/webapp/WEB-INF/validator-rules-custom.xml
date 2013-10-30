@@ -7,7 +7,7 @@
    <global>
 
       <validator name="twofields"
-         classname="com.sas.brd.sicc.webapp.util.ValidationUtil"
+         classname="com.sas.brd.sicc.util.ValidationUtil"
          method="validateTwoFields"
          methodParams="java.lang.Object,
                        org.apache.commons.validator.ValidatorAction,
